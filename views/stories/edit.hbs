@@ -1,0 +1,32 @@
+<div class="row">
+    <form method="POST" action="/stories/{{story._id}}" class="col s12">
+        <input type="hidden" name="_method" value="PUT">
+        <div class="row">
+            <div class="input-field">
+                <input type="text" id="title" name="title" value="{{story.title}}">
+                <label for="title">Title</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field">
+            <select name="status" id="status">
+                {{#select story.status}}
+                <option value="public" selected>Public</option>
+                <option value="private">private</option>
+                {{/select}}
+            </select>
+            <label for="status">status</label>
+            </div>        
+        </div>
+        <div class="row">
+            <div class="input-field">
+            <h5>tell us your story</h5>
+            <textarea name="body" id="body" cols="30" rows="10" >{{story.body}}</textarea>
+            </div>    
+        </div>
+        <div class="row">
+            <input type="submit" value="save" class="btn">
+            <a href="/dashboard" class="btn orange">Cancel</a>
+        </div>
+    </form>
+</div>

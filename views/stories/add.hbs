@@ -1,0 +1,29 @@
+<div class="row">
+    <form method="POST" action="/stories" class="col s12">
+        <div class="row">
+            <div class="input-field">
+                <input type="text" id="title" name="title">
+                <label for="title">Title</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field">
+            <select name="status" id="status">
+                <option value="public" selected>Public</option>
+                <option value="private">private</option>
+            </select>
+            <label for="status">status</label>
+            </div>        
+        </div>
+        <div class="row">
+            <div class="input-field">
+            <h5>tell us your story</h5>
+            <textarea name="body" id="body" cols="30" rows="10"></textarea>
+            </div>    
+        </div>
+        <div class="row">
+            <input type="submit" value="save" class="btn">
+            <a href="/dashboard" class="btn orange">Cancel</a>
+        </div>
+    </form>
+</div>
